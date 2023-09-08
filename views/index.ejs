@@ -4,8 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    #circle{
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background-color: red;
+      overflow: hidden;
+      object-fit: cover;
+    }
+    #circle img{
+      height: 100%;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
+  <div id="circle">
+    <img src="../images/uploads/<%= dets.pic %>" alt="">
+  </div>
   <form action="/upload" method="post" enctype="multipart/form-data">
     <input type="file" name="image">
     <input type="submit">
